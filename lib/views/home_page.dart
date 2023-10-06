@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   Future<void> getScore() async {
     try {
       String endpoint =
-          'https://deployml-service-jazaelog.cloud.okteto.net/score';
+          'https://heartdisease-service-gerardosolanoo.cloud.okteto.net/score';
       final response = await Dio().post(endpoint, data: {
         "age": int.tryParse(ageController.text) ?? 0,
         "sex": int.tryParse(sexController.text) ?? 0,
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                   getScore();
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green[900], // Cambiar a verde oscuro
+                  backgroundColor: Colors.green[900],
                 ),
                 child: const Text('Calcular'),
               ),
